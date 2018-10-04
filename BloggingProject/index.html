@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BlogProject</title>
+    <!-- Bootstrap core CSS -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="Content/customstyle/mainstyle.css" rel="stylesheet" />
+    <!--AngularJS-->
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <!--AngularJS Module-->
+    <script src="AngularJS/module/app.module.js"></script>
+    <!--AngularJS Controller-->
+    <script src="AngularJS/controller/posts.controller.js"></script>
+    <script src="AngularJS/controller/postdetails.controller.js"></script>
+    <script src="AngularJS/controller/mypost.controller.js"></script>
+    <script src="AngularJS/controller/login.controller.js"></script>
+    <script src="AngularJS/controller/registration.controller.js"></script>
+    <script src="AngularJS/controller/addpost.controller.js"></script>
+    <script src="AngularJS/controller/authorpost.controller.js"></script>
+    <!--AngularJS Directive-->
+    <script src="AngularJS/directives/post.directive.js"></script>
+    <script src="AngularJS/directives/starrating.directive.js"></script>
+    <!--AngularJS Services-->
+    <script src="AngularJS/services/apiFactory.services.js"></script>
+</head>
+
+<body ng-app="myapp">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#/!">BlogProject</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#/!">
+                            Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!mypost">My post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!addpost">Add post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!login"  >Login</a>
+                    </li> 
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!registration" >Register</a>
+                    </li>                
+               
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <ng-view></ng-view>
+            <!--Main Content Here-->
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; BlogProject 2018</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

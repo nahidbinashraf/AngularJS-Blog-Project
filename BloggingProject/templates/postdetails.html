@@ -1,0 +1,49 @@
+﻿
+<!-- Post Details Column -->
+<div class="col-lg-8">
+    <!-- Blog Post -->
+    <h2>{{detailspostserror}}</h2>
+    <!-- Title -->
+
+    <h1 class="mt-4">{{postsdetails.Postttile}}</h1>
+    <div star-rating  rating-value="postsdetails.Rating" on-rating-selected="getSelectedRating(rating)" ng-click="postrating()"></div>
+    {{postsdetails.Rating}}
+    <!-- Author -->
+    <p class="lead">
+        as
+        by
+        <a href="#">{{postsdetails.Username}}</a>
+    </p>
+
+    </
+    P
+
+    <hr>
+
+    <!-- Post Content -->
+    <p class="lead">{{postsdetails.PostDetails}}</p>
+    <hr>
+
+    <!-- Comments Form -->
+    <div class="card my-4">
+        <h5 class="card-header">Leave a Comment:</h5>
+        <div class="card-body">
+            <form ng-submit="submitComments()" method="post">
+                <div class="form-group">
+                    <textarea class="form-control" rows="3" ng-model="inputcomments"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Single Comment -->
+    <div class="media mb-4" ng-repeat="comment in comments">
+
+        <div class="media-body">
+            <h5 class="mt-0">{{comment.CommentName}}</h5>
+            {{comment.Comments}}
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,26 @@
+﻿
+<!-- Post Entries Column -->
+<div class="col-md-8">
+    <input class="btn btn-success pull-right"
+           type="button" value="Log Off" ng-click="logoff()" />
+    <!-- Post Post -->
+    <h1 class="my-4">
+        MyPosts
+        <small>{{mypostserror}}</small>
+    </h1>
+    <div class="card mb-4" ng-repeat="mypost in myposts">
+
+        <div class="card-body">
+
+            <h2 class="card-title">{{mypost.MyPostttile}}</h2>
+            <p class="card-text">{{mypost.MyPostDetails}}</p>
+            <!--<button type="submit" class="btn btn-primary">Edit Post</button>-->
+            <button type="submit" class="btn btn-primary" ng-click="deleteMyPost(mypost.MyPostId)">Delete Post</button>
+        </div>
+        <div class="card-footer text-muted">
+            <a href="#!postdetails/{{mypost.MyPostId}}" class="float-right">Read More &rarr;</a>
+        </div>
+    </div>
+
+
+</div>

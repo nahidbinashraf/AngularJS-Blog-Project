@@ -1,0 +1,11 @@
+﻿<!-- Post Directive calling Column -->
+<div class="col-md-8">
+    <h1 class="my-4">
+        Posts
+        <small>{{allpostserror}}</small>
+    </h1>
+    <div class="card mb-4">
+        <!--calling directive-->
+        <post-directive posts="post" ng-repeat="post in allposts"></post-directive>
+    </div>
+</div>

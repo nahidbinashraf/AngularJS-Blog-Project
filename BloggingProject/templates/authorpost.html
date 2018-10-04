@@ -1,0 +1,25 @@
+﻿<!-- Post Entries Column -->
+<div class="col-md-8">
+    <input class="btn btn-success pull-right"
+           type="button" value="Log Off" ng-click="logoff()" />
+    <!-- Post Post -->
+    <h1 class="my-4">
+        Author Posts
+        <small>{{authorpostserror}}</small>
+    </h1>
+    <div class="float-left">
+        Average Rating For Author Post: 4 &nbsp;
+    </div>
+    <div>
+        <div star-rating rating-value="getAverageValue('Rating')"></div>      
+    </div>
+    <div class="card mb-4" ng-repeat="authorpost in authorposts">
+        <div class="card-body">
+            <h2 class="card-title">{{authorpost.Postttile}}</h2>
+            <p class="card-text">{{authorpost.PostDetails}}</p>
+        </div>
+        <div class="card-footer text-muted">
+            <a href="#!postdetails/{{authorpost.PostId}}" class="float-right">Read More &rarr;</a>
+        </div>
+    </div>
+</div>
